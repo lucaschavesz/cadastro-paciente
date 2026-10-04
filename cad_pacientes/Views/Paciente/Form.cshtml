@@ -1,0 +1,21 @@
+﻿@model PacienteViewModel
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>Cadastro de Paciente</h2>
+<form action="Salvar" method="post">
+    <label for="Id" class="control-label">ID</label>
+    <input type="number" Name="Id" value="@Model.Id" />
+    <br />
+    <label for="Nome" class="control-label">Nome do Paciente</label>
+    <input type="text" Name="Nome" value="@Model.Nome" />
+    <br />
+    <label for="Data_nascimento" class="control-label">Data de nascimento</label>
+    <input type="date" Name="Data_nascimento" value="@Model.Data_nascimento.ToString("yyyy-MM-dd")" />
+    <br />
+    <label for="NomeResponsavel" class="control-label">Nome do Responsável</label>
+    <input type="text" Name="NomeResponsavel" value="@Model.NomeResponsavel" />
+    <br />
+    <input type="submit" value="Salvar dados" />
+    <br />
+</form>

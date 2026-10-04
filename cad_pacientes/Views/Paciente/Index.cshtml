@@ -1,0 +1,40 @@
+﻿@model List<PacienteViewModel>
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>Listagem de Pacientes</h2>
+
+<a href="/paciente/create">Novo Registro</a>
+<br />
+
+<table class="table table-responsive">
+    <tr>
+        <th>Ações</th>
+        <th>Id</th>
+        <th>Nome</th>
+        <th>Data de Nascimento</th>
+        <th>Nome do Responsável</th>
+    </tr>
+    @foreach (var paciente in Model)
+    {
+        <tr>
+            <td>
+                <a href="/paciente/Edit?id=@paciente.Id">Editar</a>
+                <a href="javascript:apagarPaciente(@paciente.Id)">Apagar</a>
+            </td>
+
+            <td>@paciente.Id</td>
+            <td>@paciente.Nome</td>
+            <td>@paciente.Data_nascimento.ToShortDateString()</td>
+            <td>@paciente?.NomeResponsavel</td>
+        </tr>
+    }
+</table>
+
+<script>
+    function apagarPaciente(id)
+    {
+    if (confirm('Confirma a exclusão do registro?'))
+    location.href = 'paciente/Delete?id=' + id;
+    }
+</script>
