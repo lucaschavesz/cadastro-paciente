@@ -1,6 +1,6 @@
 # 🏥 CRUD de Pacientes
 
-Sistema desenvolvido em **ASP.NET MVC** para gerenciamento de pacientes, utilizando **C#**, **ADO.NET** e **SQL Server**.
+Sistema desenvolvido em **ASP.NET MVC** para gerenciamento de pacientes, utilizando **C#**, **ASP.NET** e **SQL Server**.
 
 ## Funcionalidades
 
